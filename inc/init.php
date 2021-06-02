@@ -4,7 +4,7 @@ define("HASHTAGCONTACT",dirname(__FILE__));
 spl_autoload_register(function ($class) {
     // base directory for the namespace prefix
     $base_dir = __DIR__ . '/classes/';
-    
+
     if(strpos($class, 'Hashtag')!==0){
         return;
     }
@@ -35,6 +35,6 @@ spl_autoload_register(function ($class) {
 require_once(__DIR__."/helpers/core.php");
 
 new Hashtag\Theme\Main();
-new Hashtag\Admin\HashTagAdmin();
+// new Hashtag\Admin\HashTagAdmin();
 
 

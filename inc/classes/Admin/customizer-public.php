@@ -290,34 +290,6 @@ function paig_metadata_customize_register($wp_customize)
         ),
     ));
 
-
-//    // theme layout settings
-//    $wp_customize->add_panel( 'layout_setting', array(
-//        'capability'     => 'edit_theme_options',
-//        'title'          => 'PAIG Layout Settings',
-//    ));
-//    $wp_customize->add_section( 'paig_layout_settings' , array(
-//        'title'             => 'PAIG Layout Settings',
-//        'panel'             => 'layout_settings',
-//    ));
-//
-//    $wp_customize->add_setting( "header_layout_type" , array(
-//        'type'          => 'theme_mod',
-//        'transport'     => 'refresh',
-//    ));
-//
-//    $wp_customize->add_control(
-//        new WP_Customize_Color_Control(
-//            $wp_customize,
-//            'paig_theme_color',
-//            array(
-//                'label'      => "Theme Color",
-//                'section'    => 'paig_color_settings',
-//                'settings'   => 'primary_color',
-//            ) )
-//    );
-
-
 }
 
 add_action('customize_register', 'paig_metadata_customize_register');

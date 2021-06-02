@@ -36,9 +36,9 @@ class HashTagAdmin
         if ($is_content_disabled && $is_content_disabled === "yes") return;
 
         add_action('admin_enqueue_scripts', array($this, 'enqueue_scripts_front_end'));
-        add_action("admin_init", array($this, "removeDefaultContent"));
-        add_action("admin_init", array($this, "registerMetas"));
-        add_action("admin_init", array($this, "registerBannerBoxes"));
+        // add_action("admin_init", array($this, "removeDefaultContent"));
+        // add_action("admin_init", array($this, "registerMetas"));
+        // add_action("admin_init", array($this, "registerBannerBoxes"));
     }
 
     function setupNewHashtagPortalSite(\WP_Site $new_site)
@@ -47,7 +47,7 @@ class HashTagAdmin
         try {
             $home_page_id = $this->createPage("home", "Home", true);
             $about_page = $this->createPage("about", "About");
-    
+
             $contact_page = $this->createPage("contact", "Contact", false, 'page-templates/page-contact.php');
             $privacy_page = $this->createPage('privacy-policy', "Privacy Policy");
             $terms_page = $this->createPage('terms-of-use', "Terms of Use");
